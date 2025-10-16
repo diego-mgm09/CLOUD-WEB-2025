@@ -1,0 +1,536 @@
+/* BEBAS NEUE LETRAS DEL TITULO PRINCIPAL*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+/* INTER LETRA PARA TODO que no sea el titulo del encabezado*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* ALAN SANS, como alternativa JAJAJAJj*/
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* Tik Tok sans, sugerencia socio */
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
+
+/* ESTILOS DEL HEADER */
+.header{
+    background-size:contain;
+    height: 100vh;
+    width: 100%;
+    border: 1px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+
+/* PARTE SUPERIOR DEL HEADER*/
+.navbar ul{
+    list-style: none;
+    display: flex;
+    width: 40rem;
+    margin-left: -30rem;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    height: 100%;
+    width: 20%;
+    padding: 1.8rem 0 1.6rem 0;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+}
+.navbar ul li::after{
+    content: '';
+    background-color: #1b54d0;
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transition: .3s ease-in-out;
+
+}
+.navbar ul li:hover::after{
+    transition: .3s ease-in-out;
+    width: 100%;
+    left: 0;
+}
+.navbar ul li::before{
+    content: '';
+    background-color: #86a4e600;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    left: 50%;
+
+}
+.navbar ul li:hover::before{
+    content: '';
+    background-color: #cae3fe44;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    transition: .3s ease-in-out;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #081856;
+    font-family: inter;
+    font-weight: 700;   
+    text-align: center;
+    z-index: 999;
+}
+.upper_header{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    height:10vh;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+    
+}
+.header .upper_header .logo{
+    height: 3.4rem;
+    margin-left: 9rem;
+    margin-top: .5rem;
+}
+
+
+/* SIDE BAR*/
+.slide{
+
+    background-color: #fff;
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    transition: .5s ease;
+    top: 0;
+    right: -300px;
+    
+
+}
+.slide.active{
+    transition: .5s ease;
+    right: 0 ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px 100rem;
+}
+.slide_title{
+    color:  #081856;
+    text-align: left;
+    padding: 22px 0 19px 22px;
+    pointer-events: none;
+    font-family: inter;
+    font-weight: 700;
+    border-bottom: solid;
+}
+.slide ul{
+    margin-top: 5%;
+}
+.slide ul li{
+    list-style: none;
+    margin-top: 3%;
+}
+.slide ul li a{
+    color:  #081856;
+    text-decoration: none;
+    font-family: inter;
+    padding: 10px 0 15px 20px;
+    display: block;
+    transition: .5s ease;
+    position: relative;
+    border-left: #081856 solid 0rem;
+}
+.slide ul li a:hover{
+    border-left: #081856 solid 1.5rem;
+    transition: .5s ease-out;
+}
+
+.slide ul li a i{
+    text-align: center;
+    color: #1b54d0;
+}
+.ham_menu {
+    height: 50px;
+    width: 40px;
+    left: -4vh;
+    position: relative;
+    z-index: 1;
+    top: .5rem;
+}
+.ham_menu.active{
+    height: 40px;
+    width: 30px;
+    left: -4vh;
+    margin-top: 5px;
+    position: relative;
+    transition: .5 ease;
+}
+.ham_menu span{
+    height: 4px;
+    width: 100%;
+    background-color: #081856;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham_menu span:nth-child(1){
+    top:25%;
+}
+.ham_menu span:nth-child(3){
+    top:75%;
+}
+.ham_menu.active span {
+    background-color: #1e408a;
+}
+.ham_menu.active span:nth-child(1){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham_menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham_menu.active span:nth-child(3){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* PARTE INFERIOR DEL HEADER*/
+
+.header .lower_header{
+    display: flex;
+    align-items: center;
+    margin-top: 9.5vh;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+.header .lower_header div{
+    margin-right:10%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+}
+.header .lower_header h1{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    color: #07114c;
+    font-size: 6rem;
+    margin-bottom: -1.5rem;
+    text-align: right;
+}
+.header .lower_header span{
+    font-family: Bebas Neue;
+    color: #1d35d0;
+    font-size: 5rem;
+    text-align: right;
+}
+.header .lower_header p{
+    font-family: inter;
+    color: #000000;
+    font-size: 1rem;
+    width: 80%;
+    text-align: right;
+}
+.header .lower_header img{
+    height: 90%;
+    margin-left: 10vh;
+    transition: .5s ease;
+}
+.header .lower_header img:hover{
+    transition: .5s ease;
+    height: 92%;
+    margin-left: 9vh;
+
+}
+
+
+/* SECCIÓN 1 DEL MAIN */
+.proteccion{
+    scroll-margin-top: 9.5vh; /* ajusta este valor al alto de tu header */
+    width: 100%;
+    height: 130vh;
+    background-color:#e3f0ff;
+    display: flex;
+    flex-direction: column;
+}
+.proteccion h2{
+    font-family: inter;
+    color: #07114c;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+}
+.proteccion .cards{
+    height: 75%;
+    display: flex;
+}
+.proteccion .cards .container{
+    backdrop-filter: blur(10rem);
+    background-color: rgba(255, 255, 255, 0.447);
+    width: 90%;
+    height: 17.5%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+.lefting{
+    animation: lefting both;
+    animation-timeline: view();
+    animation-timeline: view(70% 40%);
+}
+@keyframes lefting {
+    from{
+        opacity: 0;
+        transform:translateY(4rem);
+    }to{
+        opacity: 1;
+        transform:translateY(0rem) ;
+
+    }
+}
+.righting{
+    animation: righting both;
+    animation-timeline: view();
+    animation-timeline: view(70% 40%);
+}
+@keyframes righting {
+    from{
+        opacity: 0;
+        transform:translateY(4rem);
+    }to{
+        opacity: 1;
+        transform:translateY(0rem) ;
+
+    }
+}
+.proteccion .cards .container p{
+    font-family: inter;
+    width: 90%;
+    margin-left: 5%;
+}
+.proteccion .cards .container a{
+    font-family: inter;
+    width: 10%;
+    height: 30%;
+    margin: 5%;
+    background-color: #da9010;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.proteccion .cards .container i{
+    color: #1e408a;
+}
+
+
+
+/* SECCIÓN 2 DEL MAIN */
+.responsabilidad {
+
+    scroll-margin-top: 9.5vh; /* ajusta este valor al alto de tu header */
+    width: 100%;
+    height: 120vh;
+    background-image: url(../IMGS/enhanced_encabezado\ 3.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.responsabilidad table{
+    width: 75%;
+    height: 65%;
+    border-collapse: collapse; /* Para que los bordes de las celdas se fusionen */
+    border: 1px solid black; /* Un borde visible en la tabla */
+    border-radius: 10px; /* Define el radio del redondeo */
+    overflow: hidden; /* Para asegurar que el contenido se mantenga dentro de los bordes redondeados */
+}
+.responsabilidad table .f1{
+    background-color: #f8f9fa;
+}
+.responsabilidad table .f{
+    background-color: #fff;
+    border-radius: 10px;
+}
+.responsabilidad table th{
+    color: #07114c;
+
+}
+.responsabilidad table td,th{
+    border: 1px solid #ddd; /* Bordes internos para las celdas */
+    padding: 1rem;
+    text-align: left;
+    font-family: inter;
+
+}
+.responsabilidad h2{
+    font-family: inter;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+}
+
+
+/* SECCIÓN 3 DEL MAIN */
+.entornos {
+    scroll-margin-top: 15vh; /* ajusta este valor al alto de tu header */
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    margin-top: 5rem;
+    /*background-image: url(/IMGS/fondo_pag_2.png);*/
+}
+.entornos h2{
+    font-family: inter;
+    color: #07114c;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.entornos div{
+    height: 60%;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: center;
+
+}
+.entornos div .cartita{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+    border-radius: 10px;
+    margin: 3rem;
+    background-color: #2068c7;
+}
+.entornos div .cartita h3{
+    font-family: inter;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+}
+.entornos div .cartita p{
+    font-family: inter;
+    color: #fff;
+    text-align: center;
+    width: 85%;
+}
+.entornos div .cartita img{
+    height: 7rem;
+    width: 7rem;
+    margin: 2rem 0 1rem 0;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+/* Footer*/
+.footer{
+    height: 45vh;
+    width: 100%;
+    background-color: #031c79;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* PARTE SUPERIOR DEL FOOTER*/
+.footer .upper_footer{
+    height: 80%;
+    background-color:#031c79;
+    width: 90%;
+    border-bottom: white solid 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .upper_footer .icons{
+    margin-top: 2rem;
+    display: flex;
+    margin-right: 2rem;
+}
+.footer .upper_footer .icons .circle{
+    background-color: #ffffff;
+    margin-left: 1rem;
+    border-radius: 100px;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+    border: #fff solid 0rem;
+}
+.footer .upper_footer .icons .circle:hover{
+    box-shadow: 0 0 10px #fff;
+    transition: .3s ease;
+}
+
+.footer .upper_footer .icons a i{
+    font-size: 1.5rem;
+    border-radius: 100px;
+    color: #2511bd;
+    margin-left: .5rem;
+}
+.footer .upper_footer .info h4{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: inter;
+    font-size: 1.3rem;
+}
+
+.footer .upper_footer .info .us p{
+    margin-top: .5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: inter;
+    font-size: 1rem;
+}
+
+
+
+
+/* PARTE INFERIOR DEL FOOTER*/
+.footer .lower_footer{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .lower_footer p{
+    margin-top: 2%;
+    color: #ffffff;
+    font-family: inter;
+}

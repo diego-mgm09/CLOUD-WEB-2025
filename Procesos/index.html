@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK DE CONEXION CON EL DOCUMENTO CSS-->
+    <link rel = "stylesheet" href = "style.css"/>
+    <title>CloudSecurity</title>
+</head>
+<body>
+    <!-- INICIO DE HEADER-->
+    <!-- El header esta dividido en dos partes, el header superior, en el cual se encuentra la barra de navegación el logo, y un menu desplegable;
+      Y el header inferior, en el cual inicia el reccorido con información acerca de la web, que incluye una imagen, el titulo y una imagen--> 
+    <header class = "header">
+        <!-- INICIO DE HEADER SUPERIOR-->
+        <div class="upper_header">
+            <img src="../IMGS/logo.png" alt="" class="logo">
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Descripción</a>
+                    </li>
+                    <li>
+                        <a href="#section1">Fundamentos</a>
+                    </li>
+                    <li>
+                        <a href="#section2">Riesgos</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- BOTOM MENU DESPLEGABLE-->
+            <div class="ham_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- MENÚ DESPLEGABLE-->
+            <div class= "slide">
+                <h2 class="slide_title">MENU</h2>
+                <ul>
+                    <li>
+                        <a href="../index/index.html"><i class="fa-solid fa-cloud"></i></i> Inicio</a>
+                    </li>
+                    <li>
+                        <a href="../Funcionalidad/index.html"><i class="bi bi-gear-fill"></i> Funcionalidad</a>
+                    </li>
+
+                    <li>
+                        <a href="../Proveedores/index.html"><i class="fa-solid fa-building"> </i>Distribuidores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- INICIO DE HEADER INFERIOR-->
+        <div class="lower_header">
+            <div>
+                <h1>PROCESOS Y RIESGOS:</h1>
+                <span>SEGURIDAD DE LA NUBE</span>
+                <p>La seguridad en la nube, posee unos fundamento y riesgos, los cuales son importante conocer para comprender no unicamente como funciona la nube, si no también para poder resolver problemas relacionados con la misma en caso de emergencia.</p>
+            </div>
+            <img src="../IMGS/peligrox.png" alt="">
+        </div>
+
+    </header>
+
+    <!-- INICIO main -->
+    <main>
+        <!-- INICIO SECCION DE LINEA DE FUNDAMENTOS -->
+        <section class="fundamentos" id = "section1">
+            <div class="izquierda">
+                <div class = "image1 fade_up">
+                    <img src="../IMGS/time-line/img1.png" alt="">
+                </div>
+                <div class = "text2 fade_up" >
+                    <h2>La gestión de identidades y accesos (IAM)</h2>
+                    <p>Son Los controles de acceso que restringen usuarios, tanto a los legítimos como a los maliciosos, el acceso y el compromiso de los datos confidenciales y sistemas.La gestión de contraseñas, la autenticación de varios factores y otros métodos entran en el alcance de la IAM.</p>
+                </div>
+                <div class = "image3 fade_up">
+                    <img src="../IMGS/time-line/img33.png" alt="">
+                </div>
+                <div class = "text4 fade_up">
+                    <h2>La planificación de la retención de datos (DR) y la continuidad del negocio (BC)</h2>
+                    <p>medidas técnicas de recuperación de desastres en caso de pérdida de datos. Los métodos para la redundancia de datos, como las copias de seguridad, son fundamentales para cualquier plan de DR y BC. </p>
+                </div>
+                <div class = "image5 fade_up">
+                    <img src="../IMGS/time-line/img55.png" alt="">
+                </div>
+            </div>
+            <div class="linea"></div>
+            <div class="derecha">
+                <div class = "text1 fade_up">
+                    <h2>La seguridad de los datos</h2>
+                    <p>aspecto de la seguridad en la nube que implica el fin técnico de la prevención de amenazas.barreras entre el acceso y la visibilidad de los datos confidenciales. Entre ellas, el cifrado.</p>
+                </div>
+                <div class = "image2 fade_up">
+                    <img src="../IMGS/time-line/img22.png" alt="">
+                </div>
+                <div class = "text3 fade_up">
+                    <h2>La gobernanza</h2>
+                    <p>Políticas de prevención, detección y mitigación de amenazas.Estas se aplican sobre todo en los entornos empresariales, pero las normas para el uso seguro y la respuesta a las amenazas pueden ser útiles para cualquier usuario.</p>
+                </div>
+                <div class = "image4 fade_up">
+                    <img src="../IMGS/time-line/img44.png" alt="">
+                </div>
+                <div class = "text5 fade_up" >
+                    <h2>El cumplimiento legal </h2>
+                    <p> Los gobiernos asumieron la importancia de proteger la información de los usuarios privados para que no sea explotada con fines de lucro. Uno de los enfoques es el uso del cifrado llamado enmascaramiento de datos.</p>
+                </div>
+            </div>
+        </section>
+        <section class="riesgos" id="section2">
+            <h2>
+                Riesgos para la seguridad en la nube
+            </h2>
+            <p> 
+                ¿Cuáles son los problemas de seguridad en la informática en la nube? Si no es consciente de su existencia ¿cómo se supone que va a tomar las medidas adecuadas? Después de todo, una seguridad débil en la nube puede exponer a los usuarios y proveedores a todo tipo de amenazas de ciberseguridad. Algunas amenazas comunes a la seguridad en la nube incluyen:
+            </p>
+            <div>
+                <div>
+                    <p>Riesgos de la infraestructura basada en la nube, incluidas las plataformas informáticas heredadas incompatibles y las interrupciones de los servicios de almacenamiento de datos de terceros.</p>
+                </div>
+                <div>
+                    <p>Amenazas externas causadas casi exclusivamente por actores maliciosos, como malware, phishing y ataques de DDoS.</p>
+                </div>
+                <div>
+                    <p>Amenazas internas debidas a errores humanos como, por ejemplo, la mala configuración de los controles de acceso de los usuarios.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+     <!-- INICIO DE FOOTER-->
+    <footer class="footer">
+        <!-- INICIO DE FOOTER SUPERIOR-->
+        <div class="upper_footer">
+            <div class="info">
+                <div class="us">
+                    <h4>Sobre Nostros</h4>
+                    <p>La web acerca de seguridad digital más completa, con la información mas importante y reciente.</p>
+                </div>
+                <div class="us">
+                    <h4>Consejo del día</h4>
+                    <p>Nunca te conectes a una red publica de un lugar desconocido.</p>
+                </div>
+            </div>
+            <div class="social_media">
+                <div class="icons">
+                    <div class="circle">
+                        <a href="#">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="circle">
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="circle">
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                    <div class="circle">
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- INICIO DE FOOTER INFERIOR-->
+        <div class="lower_footer">
+            <p>
+                Terminos & Condiciones
+            </p>
+            <p>
+                @Copyright2025|Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+    
+    <!-- LINK DE CONEXION CON EL DOCUMENTO JAVASCRIPT-->
+    <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,485 @@
+/* BEBAS NEUE LETRAS DEL TITULO PRINCIPAL*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+/* INTER LETRA PARA TODO que no sea el titulo del encabezado*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* ALAN SANS, como alternativa JAJAJAJj*/
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* Tik Tok sans, sugerencia socio */
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
+
+/* ESTILOS DEL HEADER */
+.header{
+    height: 100vh;
+    width: 100%;
+    border: 1px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+
+/* PARTE SUPERIOR DEL HEADER*/
+.navbar ul{
+    list-style: none;
+    display: flex;
+    width: 30rem;
+    margin-left: -35rem;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    height: 100%;
+    width: 25%;
+    padding: 1.8rem 0 1.6rem 0;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+}
+.navbar ul li::after{
+    content: '';
+    background-color: #1b54d0;
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transition: .3s ease-in-out;
+
+}
+.navbar ul li:hover::after{
+    transition: .3s ease-in-out;
+    width: 100%;
+    left: 0;
+}
+.navbar ul li::before{
+    content: '';
+    background-color: #86a4e600;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    left: 50%;
+
+}
+.navbar ul li:hover::before{
+    content: '';
+    background-color: #cae3fe44;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    transition: .3s ease-in-out;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #081856;
+    font-family: inter;
+    font-weight: 700;   
+    text-align: center;
+    z-index: 999;
+
+}
+.upper_header{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    height:10vh;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+    
+}
+.header .upper_header .logo{
+    height: 3.4rem;
+    margin-left: 9rem;
+    margin-top: .5rem;
+}
+
+
+/* SIDE BAR*/
+.slide{
+
+    background-color: #fff;
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    transition: .5s ease;
+    top: 0;
+    right: -300px;
+    
+
+}
+.slide.active{
+    transition: .5s ease;
+    right: 0 ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px 100rem;
+}
+.slide_title{
+    color:  #081856;
+    text-align: left;
+    padding: 22px 0 19px 22px;
+    pointer-events: none;
+    font-family: inter;
+    font-weight: 700;
+    border-bottom: solid;
+}
+.slide ul{
+    margin-top: 5%;
+}
+.slide ul li{
+    list-style: none;
+    margin-top: 3%;
+}
+.slide ul li a{
+    color:  #081856;
+    text-decoration: none;
+    font-family: inter;
+    padding: 10px 0 15px 20px;
+    display: block;
+    transition: .5s ease;
+    position: relative;
+    border-left: #081856 solid 0rem;
+}
+.slide ul li a:hover{
+    border-left: #081856 solid 1.5rem;
+    transition: .5s ease-out;
+}
+
+.slide ul li a i{
+    text-align: center;
+    color: #1b54d0;
+}
+.ham_menu {
+    height: 50px;
+    width: 40px;
+    left: -4vh;
+    position: relative;
+    z-index: 1;
+    top: .5rem;
+}
+.ham_menu.active{
+    height: 40px;
+    width: 30px;
+    left: -4vh;
+    margin-top: 5px;
+    position: relative;
+    transition: .5 ease;
+}
+.ham_menu span{
+    height: 4px;
+    width: 100%;
+    background-color: #081856;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham_menu span:nth-child(1){
+    top:25%;
+}
+.ham_menu span:nth-child(3){
+    top:75%;
+}
+.ham_menu.active span {
+    background-color: #1e408a;
+}
+.ham_menu.active span:nth-child(1){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham_menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham_menu.active span:nth-child(3){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+/* PARTE INFERIOR DEL HEADER*/
+.header .lower_header{
+    display: flex;
+    align-items: center;
+    margin-top: 9.5vh;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+.header .lower_header div{
+    margin-left: 10%;
+}
+.header .lower_header h1{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    color: #081856;
+    font-size: 6rem;
+    margin-bottom: -1.5rem;
+}
+.header .lower_header span{
+    font-family: bebas neue;
+    color: #1d35d0;
+    font-size: 5rem;
+}
+.header .lower_header p{
+    font-family: inter;
+    color: #000000;
+    font-size: 1rem;
+    text-align: justify;
+    margin-right: 50%;
+    width: 80%;
+}
+.header .lower_header img{
+    height: 80%;
+    margin-right: 20vh;
+    transition: .5s ease;
+}
+.header .lower_header img:hover{
+    transition: .5s ease;
+    height: 82%;
+    margin-right: 18vh;
+}
+
+/* SECCION 1 DEL MAIN*/
+.advantages{
+    scroll-margin-top: 9.5vh; /* ajusta este valor al alto de tu header */
+    height: 130vh;
+    width: 100%;
+    background-color: fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e3f0ff;
+}
+.advantages h2{
+    font-size: 3rem;
+    color: #081856;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-family: Inter;
+
+    width: 80%;
+
+}
+.advantages .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    
+}
+.advantages .cards .advantage_card{
+    /*box-shadow: 0 0 10px #ccc;*/
+    box-shadow:  rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: #ffffff ;
+    border-radius: 10px;
+    margin: 1rem 2rem 1rem 1rem ;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .5s ease;
+
+}
+
+/*.advantages .cards .advantage_card:hover{
+    transition: .5s ease;
+    height: 21rem;
+    box-shadow:  #5a7fe577 0px 0px 20px 2px;
+
+} NO ME TERMINO DE CONVENCER*/
+
+.advantages .cards .advantage_card div {
+    display: flex;
+    justify-content: space-between;
+
+}
+.advantages .cards .advantage_card div p{
+    font-family: inter;
+    text-align: right;
+    font-size: 15px;
+    margin: 2rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 17rem;
+}
+.advantages .cards .advantage_card div i{
+    margin-top: 1rem;
+    rotate: 45deg;
+    font-size: 1.5rem;
+    margin-left: -1rem;
+
+}
+.advantages .cards .advantage_card h3{
+    font-family: inter;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    color: #081856;
+}
+.autoShow{
+    animation: card-appear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes card-appear {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.autoShow2{
+    animation: img-appear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 100vh;
+}
+@keyframes img-appear {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* SECCION 2 DEL MAIN*/
+.importance{
+    scroll-margin-top: 5vh; /* ajusta este valor al alto de tu header */
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.importance img{
+    height: 70vh;
+    width: 30vw;
+    margin-right: 5rem;
+    margin-left: 8rem;
+    border-radius: 10px;
+}
+.importance div{
+    margin-top: -5rem;
+    margin-right: 8rem;
+}
+.importance div p{
+    text-align: right;
+    font-family: inter;
+    text-align: justify;
+}
+.importance div h2{
+    text-align: right;
+    margin-bottom: 5rem;
+    font-family: inter;
+    color: #081856;
+    font-size: 2.5rem;
+    width: 45rem;
+}
+
+/* Footer*/
+.footer{
+    height: 45vh;
+    width: 100%;
+    background-color: #031c79;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* PARTE SUPERIOR DEL FOOTER*/
+.footer .upper_footer{
+    height: 80%;
+    background-color:#031c79;
+    width: 90%;
+    border-bottom: white solid 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .upper_footer .icons{
+    margin-top: 2rem;
+    display: flex;
+    margin-right: 2rem;
+}
+.footer .upper_footer .icons .circle{
+    background-color: #ffffff;
+    margin-left: 1rem;
+    border-radius: 100px;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+    border: #fff solid 0rem;
+}
+.footer .upper_footer .icons .circle:hover{
+    box-shadow: 0 0 10px #fff;
+    transition: .3s ease;
+}
+
+.footer .upper_footer .icons a i{
+    font-size: 1.5rem;
+    border-radius: 100px;
+    color: #2511bd;
+    margin-left: .5rem;
+}
+.footer .upper_footer .info h4{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: inter;
+    font-size: 1.3rem;
+}
+
+.footer .upper_footer .info .us p{
+    margin-top: .5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: inter;
+    font-size: 1rem;
+}
+
+
+/* PARTE INFERIOR DEL FOOTER*/
+.footer .lower_footer{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .lower_footer p{
+    margin-top: 2%;
+    color: #ffffff;
+    font-family: inter;
+}

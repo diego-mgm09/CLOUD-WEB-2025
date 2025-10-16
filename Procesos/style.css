@@ -1,0 +1,656 @@
+/* BEBAS NEUE LETRAS DEL TITULO PRINCIPAL*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+/* INTER LETRA PARA TODO que no sea el titulo del encabezado*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* ALAN SANS, como alternativa JAJAJAJj*/
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* Tik Tok sans, sugerencia socio */
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
+
+/* ESTILOS DEL HEADER */
+.header{
+    height: 100vh;
+    width: 100%;
+    border: 1px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+
+/* PARTE SUPERIOR DEL HEADER*/
+.navbar ul{
+    list-style: none;
+    display: flex;
+    width: 30rem;
+    margin-left: -35rem;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    height: 100%;
+    width: 28%;
+    padding: 1.8rem 0 1.6rem 0;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+}
+.navbar ul li::after{
+    content: '';
+    background-color: #1b54d0;
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transition: .3s ease-in-out;
+
+}
+.navbar ul li:hover::after{
+    transition: .3s ease-in-out;
+    width: 100%;
+    left: 0;
+}
+.navbar ul li::before{
+    content: '';
+    background-color: #86a4e600;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    left: 50%;
+
+}
+.navbar ul li:hover::before{
+    content: '';
+    background-color: #cae3fe44;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    transition: .3s ease-in-out;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #081856;
+    font-family: inter;
+    font-weight: 700;   
+    text-align: center;
+    z-index: 999;
+}
+.upper_header{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    height:10vh;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+    
+}
+.header .upper_header .logo{
+    height: 3.4rem;
+    margin-left: 9rem;
+    margin-top: .5rem;
+}
+
+
+/* SIDE BAR*/
+.slide{
+
+    background-color: #fff;
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    transition: .5s ease;
+    top: 0;
+    right: -300px;
+    
+
+}
+.slide.active{
+    transition: .5s ease;
+    right: 0 ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px 100rem;
+}
+.slide_title{
+    color:  #081856;
+    text-align: left;
+    padding: 22px 0 19px 22px;
+    pointer-events: none;
+    font-family: inter;
+    font-weight: 700;
+    border-bottom: solid;
+}
+.slide ul{
+    margin-top: 5%;
+}
+.slide ul li{
+    list-style: none;
+    margin-top: 3%;
+}
+.slide ul li a{
+    color:  #081856;
+    text-decoration: none;
+    font-family: inter;
+    padding: 10px 0 15px 20px;
+    display: block;
+    transition: .5s ease;
+    position: relative;
+    border-left: #081856 solid 0rem;
+}
+.slide ul li a:hover{
+    border-left: #081856 solid 1.5rem;
+    transition: .5s ease-out;
+}
+
+.slide ul li a i{
+    text-align: center;
+    color: #1b54d0;
+}
+.ham_menu {
+    height: 50px;
+    width: 40px;
+    left: -4vh;
+    position: relative;
+    z-index: 1;
+    top: .5rem;
+}
+.ham_menu.active{
+    height: 40px;
+    width: 30px;
+    left: -4vh;
+    margin-top: 5px;
+    position: relative;
+    transition: .5 ease;
+}
+.ham_menu span{
+    height: 4px;
+    width: 100%;
+    background-color: #081856;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham_menu span:nth-child(1){
+    top:25%;
+}
+.ham_menu span:nth-child(3){
+    top:75%;
+}
+.ham_menu.active span {
+    background-color: #1e408a;
+}
+.ham_menu.active span:nth-child(1){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham_menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham_menu.active span:nth-child(3){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+/* PARTE INFERIOR DEL HEADER*/
+.header .lower_header{
+    display: flex;
+    align-items: center;
+    margin-top: 9.5vh;
+    background-color: #e3f0ff;
+    width: 100%;
+    height: 100%;
+}
+.header .lower_header div{
+    margin-left: 10%;
+}
+.header .lower_header h1{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    color: #081856;
+    font-size: 5.5rem;
+    margin-bottom: -1.5rem;
+}
+.header .lower_header span{
+    font-family: Bebas neue;
+    color: #1d35d0;
+    font-size: 4.5rem;
+}
+.header .lower_header p{
+    font-family: inter;
+    color: #000000;
+    font-size: 1rem;
+
+    margin-right: 50%;
+    width: 95%;
+}
+.header .lower_header img{
+    height: 50%;
+    margin-right: 20vh;
+    margin-left: 5%;
+    transition: .5s ease;
+}
+.header .lower_header img:hover{
+    transition: .5s ease;
+    height: 51%;
+
+
+}
+
+
+
+
+/*ANIMACION DE SECCION 1*/
+.fade_up{
+    animation: fade_up both ;
+    animation-timeline: view();
+}
+@keyframes fade_up{
+    from{
+        opacity:0;
+        transform: translateY(10px) scale(0.5);
+
+    }to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+/* SECCION 1 */
+.fundamentos{
+    scroll-margin-top: 20vh;
+    height: 240vh;
+    width: 100%;
+    display: flex;
+    margin-top:5rem;
+    
+}
+.fundamentos .izquierda{
+    background-color: rgb(255, 255, 255);
+    height: 230vh;
+    width: 50%;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+}
+
+.fundamentos .linea{
+    width: 5px;
+    background-color:#2511bd;
+    border-radius: 5px;
+    height: 240vh;
+    margin-top: -2rem;
+
+}
+
+.fundamentos .derecha{
+    background-color: rgb(255, 255, 255);
+    height: 230vh;
+    width: 50%;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+}
+
+/*IMAGENES Y TEXTO */
+/*IMAGEN Y TEXTO 1*/
+.fundamentos .izquierda .image1{
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    animation-range: entry 10% cover 30%;
+}
+.fundamentos .izquierda .image1 img{
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+    margin-right: 10%;
+
+}
+.fundamentos .derecha .text1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    animation-range: entry 10% cover 30%;
+}
+.fundamentos .derecha .text1 p{
+    font-family: inter;
+    width: 100%;
+    width: 85%;   
+
+}
+.fundamentos .derecha .text1 h2{
+    font-family: Tiktok Sans;
+    text-align: left;
+    width: 85%;      
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    color: #081856;
+    border-bottom: #869efd solid ;
+}
+/*IMAGEN Y TEXTO 2*/
+.fundamentos .derecha .image2{
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    animation-range: entry 30% cover 40%;
+}
+.fundamentos .derecha .image2 img{
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+    margin-left: 10%;
+}
+.fundamentos .izquierda .text2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    animation-range: entry 30% cover 40%;
+}
+.fundamentos .izquierda .text2 p{
+    font-family: inter;
+    width: 100%;
+    width: 85%;   
+    text-align: end;
+
+}
+.fundamentos .izquierda .text2 h2{
+    padding-bottom: 0.5rem;
+    font-family: Tiktok Sans;
+    text-align: left;
+    width: 85%;      
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #081856;
+    text-align: end;
+    border-bottom: #869efd solid ;
+}
+/*IMAGEN Y TEXTO 3*/
+.fundamentos .izquierda .image3{
+    grid-row: 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    animation-range: entry 40% cover 50%;
+}
+.fundamentos .izquierda .image3 img{
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+    margin-right: 10%;
+}
+.fundamentos .derecha .text3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 3;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    animation-range: entry 40% cover 50%;
+}
+.fundamentos .derecha .text3 p{
+    font-family: inter;
+    width: 100%;
+    width: 85%;   
+
+}
+.fundamentos .derecha .text3 h2{
+    padding-bottom: 0.5rem;
+    font-family: Tiktok Sans;
+    text-align: left;
+    width: 85%;      
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #081856;
+    border-bottom: #869efd solid ;
+}
+/*IMAGEN Y TEXTO 4*/
+.fundamentos .derecha .image4{
+    grid-row: 4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    animation-range: entry 50% cover 60%;
+}
+.fundamentos .derecha .image4 img{
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+    margin-left: 10%;
+}
+.fundamentos .izquierda .text4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 4;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    animation-range: entry 50% cover 60%;
+}
+.fundamentos .izquierda .text4 p{
+    font-family: inter;
+    width: 100%;
+    width: 85%;   
+    text-align: end;
+
+}
+.fundamentos .izquierda .text4 h2{
+    padding-bottom: 0.5rem;
+    font-family: Tiktok Sans;
+    text-align: left;
+    width: 85%;      
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #081856;
+    text-align: end;
+    border-bottom: #869efd solid ;
+}
+
+
+/*IMAGEN Y TEXTO 5*/
+.fundamentos .izquierda .image5{
+    grid-row: 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    animation-range: entry 60% cover 70%;
+}
+.fundamentos .izquierda .image5 img{
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+    margin-right: 10%;
+}
+.fundamentos .derecha .text5{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 5;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    animation-range: entry 60% cover 70%;
+}
+.fundamentos .derecha .text5 p{
+    font-family: inter;
+    width: 100%;
+    width: 85%;   
+
+}
+.fundamentos .derecha .text5 h2{
+    padding-bottom: 0.5rem;
+    font-family: Tiktok Sans;
+    text-align: left;
+    width: 85%;      
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #081856;
+    border-bottom: #869efd solid ;
+}
+
+
+
+/* SECCION 2*/
+.riesgos{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+/* Footer*/
+.footer{
+    height: 45vh;
+    width: 100%;
+    background-color: #031c79;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* PARTE SUPERIOR DEL FOOTER*/
+.footer .upper_footer{
+    height: 80%;
+    background-color:#031c79;
+    width: 90%;
+    border-bottom: white solid 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .upper_footer .icons{
+    margin-top: 2rem;
+    display: flex;
+    margin-right: 2rem;
+}
+.footer .upper_footer .icons .circle{
+    background-color: #ffffff;
+    margin-left: 1rem;
+    border-radius: 100px;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+    border: #fff solid 0rem;
+}
+.footer .upper_footer .icons .circle:hover{
+    box-shadow: 0 0 10px #fff;
+    transition: .3s ease;
+}
+
+.footer .upper_footer .icons a i{
+    font-size: 1.5rem;
+    border-radius: 100px;
+    color: #2511bd;
+    margin-left: .5rem;
+}
+.footer .upper_footer .info h4{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: inter;
+    font-size: 1.3rem;
+}
+
+.footer .upper_footer .info .us p{
+    margin-top: .5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: inter;
+    font-size: 1rem;
+}
+
+.footer .upper_footer .info .comments .entry{
+    width: 15rem;
+    color: #000000;
+    margin-top: 1rem;
+    height: 2rem;
+    border: solid #fff 1px;
+    outline: none;
+    padding-left: .5rem;
+
+}
+.footer .upper_footer .info .comments .send{
+    width: 15rem;
+    background-color: #5c88ea;
+    margin-top: 1rem;
+    height: 2rem;
+    border: transparent 1px;
+    outline: none;
+    color: #fff;
+    margin-left: .5rem;
+    font-family: inter;
+    border-radius: 5px;
+    transition: .5s ease;
+}
+.footer .upper_footer .info .comments .send:hover{
+    background-color: #da9010;
+    transition: .5s ease;
+}
+
+
+/* PARTE INFERIOR DEL FOOTER*/
+.footer .lower_footer{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .lower_footer p{
+    margin-top: 2%;
+    color: #ffffff;
+    font-family: inter;
+}
